@@ -1,0 +1,756 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* Showcase */
+header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(11,158,212), rgb(14,46,123));
+}
+
+/* Navigation */
+.navigation {
+    margin: auto;
+    width: 95%;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger{
+    color: #f4f4f4;
+    font-size: 2.5rem;
+    display: none;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 14px;
+}
+.nav-link{
+    margin-right: 10px;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    text-shadow: 0 0 5px #f4f4f4;
+}
+
+/* Logo */
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+/* Quote btn */
+.quote-btn{
+    justify-self: flex-end;
+    padding: 1% 2%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.quote-btn:hover{
+    background-color: #f4f4f431;
+}
+/* Navigation ends here ******************************************************* */
+
+/* Showcase */
+.showcase {
+    width: 100%;
+    text-align: center;
+    padding: 3rem;
+}
+
+.showcase h2{
+    margin-top: 4rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.678);
+    font-size: 1.3em;
+    letter-spacing: 3px;
+}
+.showcase h1{
+    line-height: 1.1;
+    font-size: 4.5rem;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 1rem 0;
+}
+.showcase h3{
+    color: rgba(255, 255, 255, 0.726);
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin-bottom: 6rem;
+}
+.showcase-btn, .btn{
+    color: #fff;
+    background-color: rgb(30, 194, 253);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 2rem 4rem;
+    border-radius: 70px;    
+}
+.showcase-btn{
+    z-index: 1;
+    position: relative;
+}
+.showcase-btn:hover, .btn:hover{
+    background-color: rgb(0, 158, 216);
+}
+.showcase-btn::before{
+    content: "";
+    position: absolute;
+    width: 108%;
+    height: 140%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.192),rgba(255, 255, 255, 0.103));
+    top: -20%;
+    left: -4%;
+    z-index: -1;
+    border-radius: 70px;
+}
+.showcase-btn:hover::before{
+    opacity: .5;
+}
+/* Showcase ends here ************************************************************ */
+
+/* Main */
+/* About section */
+.about{
+    background: linear-gradient(to bottom, #fff, rgb(238, 238, 238));
+    padding: 2rem;
+}
+.about-content{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 5rem 0;
+}
+.about-content h3 {
+    color: rgb(11,158,212);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.about-content h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: rgba(0, 0, 0, 0.829);
+    margin-bottom: 2rem;
+}
+.about-content img{
+    width: 100%;
+}
+.border-line {
+    margin: auto;
+    width: 10%;
+    height: 3px;
+    background: rgba(128, 128, 128, 0.267);
+    border-radius: 25px;
+    margin-bottom: 2rem;
+}
+.about-content p{
+    text-align: left;
+    color: gray;
+    margin-bottom: 5rem;
+}
+.about-content .btn{
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.103);
+}
+/* Testimonials */
+.testimonials {
+    position: relative;
+    padding: 3rem;
+    background-color: #fff;
+    margin-top: 12rem;
+}
+.circle {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgb(30, 194, 253);
+    top: -55px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.testimonials p{
+    color: gray;
+    margin: 2rem 0;
+    text-align: center;
+}
+.full-name{
+    color: rgb(24, 192, 253);
+    font-weight: 900;
+}
+.black-txt{
+    color: #000;
+    font-weight: 900;
+}
+.slider{
+    margin: 2rem auto;
+    width: 30%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-arr, .right-arr {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(146, 146, 146);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(146, 146, 146);
+    margin: 0 10px;
+}
+.left-arr, .right-arr:hover{
+    cursor: pointer;
+}
+.dot {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgb(167, 166, 166);
+}
+.first-dot {
+    background-color: #444;
+}
+
+/* About section ends here ******************************* */
+
+/* Services */
+
+.services {
+    width: 100%;
+    padding: 5rem 0;
+    background: linear-gradient(to top right, rgb(1, 55, 126), rgb(1, 70, 197));
+}
+
+.services h1{
+    color: rgba(255, 255, 255, 0.904);
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.services .border-line {
+    width: 5%;
+    background: #fff;
+}
+.services h2{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.815);
+    font-size: 16px;
+    margin-bottom: 5rem;
+    font-weight: 100;
+}
+
+/* Cards */
+.services-card{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    
+}
+
+.card {
+    padding: 4rem 2rem 2rem 2rem;
+    position: relative;
+    margin: 0 1rem 5rem 1rem;
+    flex: 0 0 350px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.13);
+}
+
+.circle-card {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgb(30, 194, 253);
+    border-radius: 50%;
+    left: 10%;
+    top: -55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-card i{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.card h2 {
+    color: rgb(49, 49, 49);
+    text-align: start;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+.card p{
+    color: rgb(131, 131, 131);
+}
+
+/* Services section ends here ******************* */
+
+/* Portfolio */
+.portfolio {
+    background: linear-gradient(to bottom, #fff, rgb(238, 238, 238));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem;
+}
+.portfolio h1{
+    color: #444;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.portfolio .border-line{
+    width: 4%;
+}
+
+.portfolio h2{
+    font-size: 16px;
+    color: rgb(131, 131, 131);
+}
+
+.portfolio-card{
+    background-color: #fff;
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.116);
+}
+.portfolio-card  div {
+    flex: 0 0 50%;
+}
+
+.card-content {
+    text-align: left;
+    padding: 4rem 2rem;
+    border-left: 1px solid rgb(206, 204, 204);
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(44, 197, 253);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.icon i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+.card-content h2 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+.card-content p {
+    line-height: 1.8;
+    font-size: 15px;
+    color:  rgb(102, 102, 102);
+}
+
+.card-links{
+    display: flex;
+    flex-direction: row;
+}
+.card-links a{
+    border: 1px solid rgb(199, 198, 198);
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 0 12px;
+    color: #444;
+    margin: 30px 5px 0 0;
+}
+/* Portfolio section ends here ****************** */
+
+/* Contact section */
+.contact {
+    background: linear-gradient(to bottom, rgb(11,158,212), rgb(14,46,123));
+    text-align: center;
+    padding-top: 5rem;
+}
+.contact h1 {
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 2.2rem;
+}
+.contact .border-line {
+    width: 4%;
+    background: #fff;
+    margin-bottom: 2rem;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name,
+.email, 
+.help {
+    width: 30rem;
+    height: 5vh;
+    margin-bottom: 1rem;
+    background: transparent;
+    outline: none;
+    padding: .5rem;
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 1rem;
+    border: 1px solid rgba(197, 197, 197, 0.698);
+    border-radius: 5px;
+}
+
+.help{
+    height: 20vh;
+    resize: none;
+    margin-bottom: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+.name::placeholder,
+.email::placeholder, 
+.help::placeholder{
+    color: rgba(255, 255, 255, 0.904);
+    font-size: 1rem;
+}
+
+.contact .btn {
+    margin-bottom: 8rem;
+}
+/* Footer */
+footer{
+    border-top: 1px solid rgba(231, 230, 230, 0.322);
+}
+.footer {
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links{
+    display: flex;
+    list-style: none;
+}
+.social-links li{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+.social-links li:hover{
+    opacity: .9;
+}
+.terms {
+    display: flex;
+
+    font-size: .8rem;
+}
+.terms a{
+    margin-left: 1rem;
+}
+
+
+/* Animation */
+@keyframes transitionShow {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes transitionClose {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.show-nav{
+    animation: transitionShow .5s ease-out forwards;
+}
+.close-nav{
+    animation: transitionClose .5s ease-in forwards;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:1432px){
+    .services-card{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .showcase h1{
+        font-size: 3.5rem;
+    }
+    .showcase h2{
+        font-size: 1rem;
+    }
+    .showcase h3{
+        font-size: 1.3rem;
+    }
+    .btn {
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media screen and (max-width:1090px){
+    .nav-links li{
+        font-size: 12px;
+    }
+    .about-content{
+        width: 70%;
+    }
+    .portfolio-card{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:990px){
+    .services-card{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:805px){
+    .card{
+        flex: 0 0 80%;
+    }
+}
+
+@media screen and (max-width:990px){
+    .showcase{
+        padding: 3rem;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-links{
+        position: absolute;
+        top: 12vh;
+        left: 0;
+        width: 100%;
+        justify-content: space-around;
+        transform: translateX(-100%);
+    }
+    .nav-links li{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:889px){
+    .showcase h1{
+        font-size: 3.2rem;
+    }
+    .showcase h2{
+        font-size: 1rem;
+    }
+    .showcase h3{
+        font-size: 1.2rem;
+    }
+    .portfolio{
+        padding: 4rem;
+    }
+    .portfolio-card{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .showcase{
+        height: unset;
+    }
+    .hamburger{
+        font-size: 2rem;
+    }
+    .quote-btn{
+        font-size: 11px;
+    }
+    .showcase h1{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    .showcase h2{
+        font-size: .8rem;
+        margin-bottom: 3rem;
+    }
+    .showcase h3{
+        font-size: 1rem;
+        margin-bottom: 8rem;
+    }
+    .btn {
+        padding: 1rem 2.2rem;
+        font-size: 1.2rem;
+    }
+    .about-content{
+        width: 80%;
+    }
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.2rem;
+    }
+    .icon i {
+        font-size: 1.8rem;
+    }
+    .card-content h2 {
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+    .card-content p {
+        line-height: 1.5;
+        font-size: 13px;
+    }
+    .terms{
+        flex-direction: column;
+        font-size: .6rem;
+    }
+    .contact h1{
+        font-size: 2rem;
+    }
+    .portfolio{
+        padding: 2.5rem;
+    }
+    .footer{
+        height: 12vh;
+    }
+}
+
+@media screen and (max-width:650px){
+    .about h1{
+        font-size: 2rem;
+    }
+    .about-content{
+        width: 90%;
+    }
+    .portfolio{
+        padding: 2rem;
+    }
+    .contact h1{
+        font-size: 1.8rem;
+    }
+    .social-links li{
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:550px){
+    .showcase h1, .showcase h2{
+        margin-bottom: 2rem;
+    }
+    .quote-btn{
+        display: none;
+    }
+    .logo{
+        position: static;
+    }
+    .nav-links li{
+        font-size: 12px;
+    }
+    .portfolio{
+        padding: 2rem 1rem;
+    }
+    .portfolio-card div{
+        flex: 0 0 100%;
+    }
+    .btn {
+        padding: 1rem 1.8rem;
+        font-size: 1.1rem;
+    }
+    .social-links li{
+        margin: 0 8px;
+        font-size: 1.2rem;
+    }
+    .name,
+    .email, 
+    .help{
+        width: 80%;
+    }
+    footer img {
+        width: 150px;
+        height: auto;
+    }
+    
+}
+@media screen and (max-width:490px){
+    .btn{
+        padding: .8rem 1.1rem;
+        font-size: 1rem;
+    }
+    .about-content{
+        width: 95%;
+    }
+    
+    .contact h1,.portfolio h1, .services h1, .about h1{
+        font-size: 1.8rem;
+    }
+    .social-links li{
+        margin: 0 0 0 5px;
+    }
+    .blank {
+        display: none;
+    }
+    .footer{
+        height: 10vh;
+    }
+    .services h2, .portfolio h2{
+        font-size: 14px;
+    }
+    .contact h1 {
+        font-size: 1.3rem;
+    }
+    .about p {
+        font-size: 14px;
+    }
+    .testimonials {
+        padding: 1.5rem;
+    }
+    .about-content {
+        width: 100%;
+    }
+}

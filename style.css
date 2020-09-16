@@ -207,8 +207,10 @@ header {
     font-weight: 900;
 }
 .slider{
-    margin: 2rem auto;
-    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -556,6 +558,8 @@ footer{
     .services-card{
         width: 95%;
     }
+    .showcase{
+        padding: 3rem;
 }
 
 @media screen and (max-width:805px){
@@ -564,10 +568,6 @@ footer{
     }
 }
 
-@media screen and (max-width:990px){
-    .showcase{
-        padding: 3rem;
-    }
     .hamburger{
         display: block;
         cursor: pointer;
@@ -752,5 +752,14 @@ footer{
     }
     .about-content {
         width: 100%;
+    }
+}
+
+@media screen and(max-width:420px;){
+    .showcase h1{
+        font-size: 1.2rem;
+    }
+    .showcase {
+        padding: 10px;
     }
 }

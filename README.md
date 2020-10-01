@@ -16,6 +16,6 @@ This is an individual project that was part of my web development training in th
 * CSS 
 * JavaScript 
 
-## 🔗 Check it below
+## 🔗 Check it out below
 
-* [Link to hosted website](https://semirkardovich.github.io/Digital-Crafters/)
+* [Link to hosted website](https://semirkardovich.github.io/Digital-Crafters/) 👀

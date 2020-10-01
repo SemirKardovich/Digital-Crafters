@@ -723,7 +723,7 @@ footer{
 }
 @media screen and (max-width:490px){
     .btn{
-        padding: .8rem 1.1rem;
+        padding: .8rem .5rem;
         font-size: 1rem;
     }
     .about-content{
@@ -769,8 +769,5 @@ footer{
     .showcase {
         padding: 10px 0;
     }
-    .btn {
-        padding: 1rem 0;
-        font-size: 1rem;
-    }
+    
 }

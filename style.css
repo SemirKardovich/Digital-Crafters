@@ -757,6 +757,9 @@ footer{
     .about-content {
         width: 100%;
     }
+    .navigation {
+        height: 10vh;
+    }
 }
 
 @media screen and(max-width:420px){

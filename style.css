@@ -31,12 +31,14 @@ header {
     align-items: center;
 }
 .hamburger{
+    flex: 1 0 30%;
     color: #f4f4f4;
     font-size: 2.5rem;
     display: none;
 }
 .nav-links {
     display: flex;
+    flex: 1 0 30%;
     justify-content: space-between;
     list-style: none;
     font-size: 14px;
@@ -51,14 +53,17 @@ header {
 
 /* Logo */
 .logo{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-
+    flex: 1 0 30%;
+    display: flex;
+    justify-content: center;
 }
-/* Quote btn */
+/* Quote */
+.quote {
+    flex: 1 0 30%;
+    display: flex;
+    justify-content: flex-end;
+}
 .quote-btn{
-    justify-self: flex-end;
     padding: 1% 2%;
     border: 2px solid #fff;
     border-radius: 30px;
@@ -77,7 +82,7 @@ header {
 .showcase {
     width: 100%;
     text-align: center;
-    padding: 3rem;
+    padding: 3rem 1rem;
 }
 
 .showcase h2{
@@ -136,13 +141,12 @@ header {
 /* About section */
 .about{
     background: linear-gradient(to bottom, #fff, rgb(238, 238, 238));
-    padding: 2rem;
 }
 .about-content{
     width: 50%;
     margin: auto;
     text-align: center;
-    padding: 5rem 0;
+    padding: 3rem 1rem;
 }
 .about-content h3 {
     color: rgb(11,158,212);
@@ -249,7 +253,7 @@ header {
 
 .services {
     width: 100%;
-    padding: 5rem 0;
+    padding: 3rem 1rem;
     background: linear-gradient(to top right, rgb(1, 55, 126), rgb(1, 70, 197));
 }
 
@@ -466,7 +470,7 @@ footer{
 }
 .footer {
     width: 90%;
-    height: 15vh;
+    min-height: 15vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -486,7 +490,6 @@ footer{
 }
 .terms {
     display: flex;
-
     font-size: .8rem;
 }
 .terms a{
@@ -520,6 +523,7 @@ footer{
 
 
 /* Responsive */
+
 
 @media screen and (max-width:1432px){
     .services-card{
@@ -556,10 +560,10 @@ footer{
 
 @media screen and (max-width:990px){
     .services-card{
-        width: 95%;
+        width: 100%;
     }
     .showcase{
-        padding: 3rem;
+        padding: 3rem 1rem;
 }
 
 @media screen and (max-width:805px){
@@ -683,8 +687,8 @@ footer{
     .showcase h1, .showcase h2{
         margin-bottom: 2rem;
     }
-    .quote-btn{
-        display: none;
+    .quote{
+        visibility: hidden;
     }
     .logo{
         position: static;
@@ -729,14 +733,14 @@ footer{
     .contact h1,.portfolio h1, .services h1, .about h1{
         font-size: 1.8rem;
     }
-    .social-links li{
-        margin: 0 0 0 5px;
-    }
+    
     .blank {
         display: none;
     }
     .footer{
         height: 10vh;
+        flex-direction: column;
+        justify-content: space-around;
     }
     .services h2, .portfolio h2{
         font-size: 14px;
@@ -755,11 +759,18 @@ footer{
     }
 }
 
-@media screen and(max-width:420px;){
+@media screen and(max-width:420px){
+    .services{
+        padding: 3rem 1rem;
+    }
     .showcase h1{
         font-size: 1.2rem;
     }
     .showcase {
-        padding: 10px;
+        padding: 10px 0;
+    }
+    .btn {
+        padding: 1rem 0;
+        font-size: 1rem;
     }
 }
